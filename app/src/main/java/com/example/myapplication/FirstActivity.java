@@ -23,7 +23,7 @@ public class FirstActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main,menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -42,12 +42,15 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
-        Button button1=(Button) findViewById(R.id.button_1);
+        Log.d("FirstActivity", this.toString());
+        Button button1 = (Button) findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
-                startActivityForResult(intent,1);
+                // Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                Intent intent = new Intent(FirstActivity.this, FirstActivity.class);
+                // startActivityForResult(intent,1);
+                startActivity(intent);
             }
         });
     }
