@@ -18,7 +18,8 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("SecondActivity",this.toString());
+        //Log.d("SecondActivity",this.toString());
+        Log.d("Secondactivity","Task id is"+getTaskId());
         setContentView(R.layout.activity_second);
         Button button2 = (Button) findViewById(R.id.button_2);
         button2.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +31,8 @@ public class SecondActivity extends AppCompatActivity {
 //               // Toast.makeText(FirstActivity.this, "secondActivity", Toast.LENGTH_SHORT).show();
 //                finish();
 
-                Intent intent = new Intent(SecondActivity.this, FirstActivity.class);
+                //Intent intent = new Intent(SecondActivity.this, FirstActivity.class);
+                Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                 startActivity(intent);
             }
         });
