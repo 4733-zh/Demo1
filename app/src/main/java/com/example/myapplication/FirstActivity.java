@@ -65,4 +65,16 @@ public class FirstActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.d("FirstActivity","onResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("FirstActivity","onRestart");
+    }
 }
